@@ -5,7 +5,9 @@ import Proj from '../components/projects/projects';
 const Projects: React.FC = () => {
     return (
         <>
-            <Proj />
+            <main>
+                <Proj />
+            </main>
         </>
     );
 };
