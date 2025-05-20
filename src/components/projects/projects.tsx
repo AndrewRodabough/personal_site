@@ -5,7 +5,7 @@ import ProjectList from './projectlist';
 
 const projects = [
   {
-    title: "Assignment Scheduler",
+    title: "WIP - Assignment Scheduler",
     description: "Advanced Task Scheduler. This project involved using HTML, CSS, and JavaScript to create a responsive web application.",
     image: "./public/assignment.png",
     links: [
@@ -22,8 +22,12 @@ const projects = [
     ]
   },
   {
-    title: "Project 3",
-    description: "Description of project 3. This project involved using HTML, CSS, and JavaScript to create a responsive web application.",
+    title: "Lawfirm Billing System",
+    description: "A Commisioned billing application to expeditie billing of clients' phone calls. Integrated with office 365. Built using Microsoft Access",
+    image: "./public/billing.png",
+    links: [
+      { label: "Learn More", url: "./billing" },
+    ]
   }
 ];
 
@@ -34,6 +38,9 @@ const Projects: React.FC = () => {
       <ul className="projects-container">
         <ProjectList projects={projects} />
       </ul>
+      <a href="./projects" className="morelink" style={{ marginTop: '1rem', alignSelf: 'center' }}>
+        View All Projects
+      </a>
     </section>
   );
 };

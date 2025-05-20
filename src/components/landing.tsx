@@ -6,7 +6,8 @@ const Landing: React.FC = () => {
   return (
         <section className="landing" id="landing">
             <div className="hero">Hello, I'm Andrew</div>
-            <div className="hero">I'm a Full Stack Developer</div>
+            <div className="hero">I'm a Student and Developer</div>
+            <a href="./resume/Resume-AndrewRodabough.pdf" target="_blank" rel="noopener" className="resume-btn">View Resume (PDF)</a>
             <div className="scroll-down-arrow">
                 <a href="#about" aria-label="Scroll to About">
                     <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
