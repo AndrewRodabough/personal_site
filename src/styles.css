@@ -1,30 +1,47 @@
 :root{
     
-    --text-primary: rgb(219, 214, 214);
-    --text-secondary: #ccc5c5;
-    --text-accent: #d05644;
+    --l-text-primary: #111111;
+    --l-text-secondary: #1b1b1b;
+    --l-accent: #ff7373;
     
-    --background-color: var(--mountains);
+    --l-background-color: var(--mountains);
+    --l-background-secondary: #ff7265;
+    --l-nav-background: #4b80cb;
+    --l-nav-text: #ffffff;
+    
+    --l-sky: linear-gradient(to bottom, #2c639a 50%, #c1dbeb);
+    --l-mountains: #eeeeee;
+
+    --l-glow: #ff726500;
+
+
+    
+    --accent: #d05644;
+    
+    --text-primary: #ededed;
+    --text-secondary: #ccc5c5;
+    
+    --background-primary: #10121b;
     --background-secondary: #1f202b;
+
+    --nav-background: #050613;
+    --nav-text: var(--text-primary);
+    
+    --sky: linear-gradient(to bottom, #091424 50%, #333c4d);
+    --mountains:  var(--background-primary);
+    --star: #fff6d3;
+    --star-shadow: #fff5;
+    
+    --glow: var(--accent);
+    --border-color: var(--accent);
     
     --circle-size: 0.6rem;
     --circle-gap: 0.2rem;
-
-    --sky: linear-gradient(to bottom, #091424 50%, #333c4d);
-    --mountains: #10121b;
-
-    --nav-background: #050613;
-
-    --border-color: var(--text-accent);
-    
-    
-
-
 }
 
 html{
     
-    background-color: var(--background-color);
+    background-color: var(--background-primary);
     color: var(--text-primary);
     font-family: 'arial', 'sans-serif';
     font-weight: 100;
@@ -48,7 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--background-color);
+    background: var(--background-primary);
     position: relative;
 }
 
@@ -99,10 +116,10 @@ body {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: #fff6d3;
+  background: var(--star);
   border-radius: 50%;
   opacity: 0.8;
-  box-shadow: 0 0 6px 2px #fff5;
+  box-shadow: 0 0 6px 2px var(--star-shadow);
   pointer-events: none;
 }
 
@@ -114,7 +131,7 @@ header{
     left: 0;
     width: 100%;
     z-index: 20;
-    background: linear-gradient(to bottom, #081529 55%, #00000000);
+    background: linear-gradient(to bottom, var(--background-primary) 55%, #00000000);
 
     padding-top: 2rem;
     padding-left: 6rem;
@@ -124,6 +141,7 @@ header{
 }
 
 .navbar{
+    color: var(--nav-text);
     background-color: var(--nav-background);
 
     border-radius: 0.5rem;
@@ -131,7 +149,7 @@ header{
 
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 -2px 7px 1px var(--border-color);
+    box-shadow: 0 -2px 7px 1px var(--glow);
 
     max-width: 66rem;
     width: 100%;
@@ -168,19 +186,14 @@ header{
 }
 
 .right nav a {
-    color: var(--text-primary);
+    color: var(--nav-text);
     text-decoration: none;
-}
-
-.right nav a {
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: color 0.15s;
 }
 
 .right nav a:hover {
-    color: var(--text-accent);
-    text-shadow: 0px 2px 6px var(--text-accent);
+    color: var(--accent);
+    text-shadow: 0px 2px 6px var(--glow);
+    transition: color 0.15s;
 }
 
 
@@ -206,8 +219,7 @@ main {
 
 .landing .hero{
     font-size: 3rem;
-    color: var(--text-accent);
-    text-shadow: 0px 2px 5px var(--background-color);
+    color: var(--accent);
     padding: 0.2rem 0;
 }
 
@@ -233,7 +245,7 @@ main {
     justify-content: center;
     align-items: center;
     animation: bounce 3s infinite;
-    color: var(--text-accent);
+    color: var(--accent);
     cursor: pointer;
     opacity: 0.85;
 }
@@ -243,7 +255,7 @@ main {
 }
 .scroll-down-arrow a:hover {
     transition: all 0.15s ease-in-out;
-    color: var(--text-accent);
+    color: var(--accent);
 }
 
 @keyframes bounce {
@@ -319,7 +331,6 @@ h1, h2, h3, h4, h5, h6, ul, p{
     height: var(--circle-size);
     border-radius: 50%;
     border: 2px solid var(--border-color);
-    background-color: #00000000;
 }
 
 .skills-list {
@@ -399,7 +410,7 @@ section {
     font-weight: 500;
     color: var(--text-primary);
     background: var(--background-secondary);
-    border: 2px solid var(--text-accent);
+    border: 2px solid var(--accent);
     border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
@@ -407,9 +418,8 @@ section {
 }
 
 .resume-btn:hover {
-    background: var(--text-accent);
-    color: #fff;
-    
+    background: var(--accent);
+    color: var(--text-primary);
 }
 
 .btn{
@@ -426,8 +436,21 @@ section {
 }
 
 .btn:hover {
-    border-color: var(--text-accent);
-    background-color: var(--text-accent);
+    border-color: var(--accent);
+    background-color: var(--accent);
     
     transition: all 0.15s ease-in-out;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    text-align: center;
 }

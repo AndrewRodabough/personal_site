@@ -9,8 +9,8 @@ const projects = [
     description: "Advanced Task Scheduler. This project involved using HTML, CSS, and JavaScript to create a responsive web application.",
     image: "./public/assignment.png",
     links: [
-      { label: "GitHub", url: "https://startup.assignmentscheduler.com/" },
-      { label: "Live Site", url: "https://www.startup.assignmentscheduler.com" }
+      { label: "GitHub", url: "https://github.com/AndrewRodabough/AssignmentScheduler" },
+      { label: "Live Site", url: "https://startup.assignmentscheduler.com" }
     ]
   },
   {
