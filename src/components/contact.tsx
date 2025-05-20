@@ -11,12 +11,8 @@ const Contact: React.FC = () => {
               <p>Email: arodabough@hotmail.com</p>
               <p>Phone: +1 (425) 677-5928</p>
             </div>
-            <a href="https://www.linkedin.com/in/andrew-rodabough-6b0795346" target="_blank" >
-              <button>Linkedin</button>
-            </a>
-            <a href="https://www.github.com/AndrewRodabough" target="_blank" >
-              <button>GitHub</button>
-            </a>
+            <a className='btn' href="https://www.linkedin.com/in/andrew-rodabough-6b0795346" target="_blank" >Linkedin</a>
+            <a className='btn' href="https://www.github.com/AndrewRodabough" target="_blank" >GitHub</a>
           </div>
     </section>
   );
