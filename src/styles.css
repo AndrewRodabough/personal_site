@@ -254,13 +254,13 @@ main {
     color: var(--text-primary);
 }
 .scroll-down-arrow a:hover {
-    transition: all 0.15s ease-in-out;
+    transition: all 0.17s ease-in-out;
     color: var(--accent);
 }
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(3px); }
+    50% { transform: translateY(5px); }
 }
 
 /* Optional: Only show arrow on screens taller than 600px */

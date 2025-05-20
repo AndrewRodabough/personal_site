@@ -10,6 +10,7 @@ const About: React.FC = () => {
             pursuing a Bachelors in Computer Science at Brigham Young University.
         </p>
         <p>In my free time, I enjoy working on personal projects, contributing to open source, and exploring the latest trends in web development.</p>
+        <p>I also enjoy ballroom dancing, art, and Cooking</p>
         <a href="./projects" className="morelink" style={{ marginTop: '1rem', alignSelf: 'center' }}>
           Learn More
         </a>
