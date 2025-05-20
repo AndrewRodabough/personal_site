@@ -26,7 +26,7 @@ const projects = [
     description: "A Commisioned billing application to expeditie billing of clients' phone calls. Integrated with office 365. Built using Microsoft Access",
     image: "/billing.png",
     links: [
-      { label: "Learn More", url: "./billing" },
+      { label: "Learn More", url: "/billing" },
     ]
   }
 ];
