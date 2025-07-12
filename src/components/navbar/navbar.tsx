@@ -16,10 +16,10 @@ const NavBar: React.FC = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-       
+        
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 768) {
+            if (window.innerWidth >= 650) {
                 setIsHamburgerVisible(false);
             } else {
                 setIsHamburgerVisible(true);
@@ -38,42 +38,43 @@ const NavBar: React.FC = () => {
 
     return (
         <header>
-            <div className="navbar">
-          
-
-                <div className="left">
-                    <h1>Andrew Rodabough</h1>
-                </div>
-          
-                <div className="right">
-                    
-                    {isHamburger ? (
-                        <button className="hamburger" onClick={toggleMenu}>
-                            <svg viewBox="0 0 100 70" width="40" height="30">
-                                <line x1="10" y1="20" x2="90" y2="20" stroke="#fff" strokeWidth="12" strokeLinecap="round"/>
-                                <line x1="10" y1="40" x2="90" y2="40" stroke="#fff" strokeWidth="12" strokeLinecap="round"/>
-                                <line x1="10" y1="60" x2="90" y2="60" stroke="#fff" strokeWidth="12" strokeLinecap="round"/>
-                            </svg>
-                        </button>
-                    ) : (
-
-                        <nav>
-                            <ul>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#projects">Projects</a></li>
-                                <li><a href="#skills">Skills</a></li>
-                                <li><a href="#resume">Resume</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    )}
-                </div>
-            </div>
+            <div className="navbarcontainer">
             
+                <div className="navbarhorizontal">
+                    <div className="left">
+                        <h1>Andrew Rodabough</h1>
+                    </div>
             
-                {isHamburger && isMenuOpen && (
-                    <div className='navbar'>
-                    <nav className="mobile-menu">
+                    <div className="right">
+                        
+                        {isHamburger ? (
+                            <button className="hamburger" onClick={toggleMenu}>
+                                <svg viewBox="0 0 100 50" width="30" height="22">
+                                    <line x1="10" y1="0" x2="90" y2="0"/>
+                                    <line x1="10" y1="25" x2="90" y2="25"/>
+                                    <line x1="10" y1="50" x2="90" y2="50"/>
+                                </svg>
+                            </button>
+                        ) : (
+
+                            <nav className='horizontal-menu'>
+                                <ul>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#projects">Projects</a></li>
+                                    <li><a href="#skills">Skills</a></li>
+                                    <li><a href="#resume">Resume</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                        )}
+                    </div>
+
+                </div>
+                
+                {/* Apply the 'open' class based on isMenuOpen state */}
+                <div className={`navbarvertical ${isMenuOpen && isHamburger ? 'open' : ''}`}>
+                    {/* The content itself is always rendered, but its visibility is controlled by max-height */}
+                    <nav className="vertical-menu">
                         <ul>
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
@@ -82,9 +83,9 @@ const NavBar: React.FC = () => {
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
-                                </div>
-                )}
-
+                </div>
+                
+            </div>
         </header>
     );
 };

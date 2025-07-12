@@ -1,20 +1,20 @@
 @import '../../styles.css';
 
-
-.navbar{
+.navbarcontainer{
     color: var(--nav-text);
     background-color: var(--nav-background);
 
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 0.8rem;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     box-shadow: 0 -2px 7px 1px var(--glow);
 
     max-width: 66rem;
+    min-height: 50px;
     width: 100%;
-    min-width: 30rem;
+
     align-content: center;
 
     margin-left: auto;
@@ -23,10 +23,68 @@
     box-sizing: border-box;
 }
 
+.navbarhorizontal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbarvertical {
+    /* Set initial state for animation */
+    max-height: 0; /* Hidden initially */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.25s ease-out; /* Smooth transition for max-height */
+}
+
+.navbarvertical.open {
+    /* When menu is open, set a max-height that's large enough to show all content */
+    /* You might need to adjust this value based on your actual menu height */
+    max-height: 200px; /* Example: adjust as needed */
+    transition: max-height 0.25s ease-in; /* Adjust timing and easing for appearance */
+}
+
+
+.navbarvertical ul{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding-top: 1rem; /* Add some padding to separate from the horizontal menu */
+    padding-bottom: 1rem; /* Add some padding to the bottom */
+}
+
+.horizortal-menu{
+
+}
+
+.vertical-menu{
+    /* These styles will be applied to the 'nav' element inside navbarvertical */
+    width: 100%; /* Ensure it takes full width */
+}
+
+
+.vertical-menu  a {
+    color: var(--nav-text);
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    color: var(--accent);
+    text-shadow: 0px 2px 6px var(--glow);
+    transition: color 0.15s;
+}
+
+
 .hamburger{
     background-color: transparent;
     border: none;
     stroke: var(--nav-text);
+    stroke-width: 10;
+    stroke-linecap: round;
+    cursor: pointer; /* Indicate it's clickable */
+    padding: 0;
 }
 
 
@@ -34,6 +92,7 @@
 .left{
     display: flex;
     align-items: center;
+    min-height: 25px;
 }
 
 .left h1{
@@ -44,6 +103,7 @@
     display: flex;
     align-items: center;
     font-size: 1rem;
+    min-height: 25px;
 }
 
 .right nav ul{

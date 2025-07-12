@@ -126,7 +126,7 @@ body {
 
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -134,8 +134,8 @@ header{
     background: linear-gradient(to bottom, var(--background-primary) 55%, #00000000);
 
     padding-top: 2rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
 }
