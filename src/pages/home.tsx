@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles.css';
 import Mountians from '../components/mountains';
-import NavBar from '../components/navbar';
+import NavBar from '../components/navbar/navbar';
 import Landing from '../components/landing';
 import About from '../components/about';
 import Projects from '../components/projects/projects';
