@@ -161,26 +161,6 @@ main {
 }
 
 
-
-
-.landing .hero{
-    font-size: 3rem;
-    color: var(--accent);
-    padding: 0.2rem 0;
-}
-
-.landing {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 20rem);
-    letter-spacing: 0.12em;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: max(10vh, 2rem);
-    position: relative; /* Add this */
-}
-
 .scroll-down-arrow {
     position: absolute;      /* Add this */
     left: 0;                 /* Add this */

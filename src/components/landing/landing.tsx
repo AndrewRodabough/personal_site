@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles.css';
+import './landing.css';
 
 
 const Landing: React.FC = () => {
