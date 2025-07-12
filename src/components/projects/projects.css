@@ -45,11 +45,17 @@
     object-fit: cover;
     display: block;
     margin: 0;
+    max-width: 100%;
+    height: auto;
+
     box-shadow: 0 0 24px 0 #0008;
     background: #222;
     flex-shrink: 0;
     z-index: 2;
 }
+
+
+
 
 .project-text {
     flex: 1 1 0;
@@ -91,4 +97,18 @@
 
 .project:nth-child(even) .project-bg {
     background: radial-gradient(circle at 15% 75%, var(--glow) 0%, transparent 60%);
+}
+
+
+@media (max-width: 720px) {
+
+    .project-content {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .project:nth-child(even) .project-content {
+        flex-direction: column;
+    }
+    
 }
