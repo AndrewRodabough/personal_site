@@ -1,0 +1,27 @@
+@import '../../styles.css';
+
+
+.landing .hero{
+     font-size: clamp(1.2rem, 3rem + ((100vw - 650px) * 0.05), 3rem);
+    color: var(--text-primary);
+    background: linear-gradient(90deg, #ff9822, #e9427f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    padding: 0.2rem 0;
+    text-align: center;
+}
+
+.landing {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 65vh;
+    letter-spacing: 0.12em;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15vh;
+    
+    position: relative; /* Add this */
+}

@@ -45,11 +45,17 @@
     object-fit: cover;
     display: block;
     margin: 0;
+    max-width: 100%;
+    height: auto;
+
     box-shadow: 0 0 24px 0 #0008;
     background: #222;
     flex-shrink: 0;
     z-index: 2;
 }
+
+
+
 
 .project-text {
     flex: 1 1 0;
@@ -65,7 +71,7 @@
 .project h2 {
     margin-top: 0;
     margin-bottom: 1.2rem;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 2rem + ((100vw - 650px) * 0.06), 2rem);
     color: var(--text-primary);
     font-weight: 700;
     letter-spacing: 0.01em;
@@ -91,4 +97,41 @@
 
 .project:nth-child(even) .project-bg {
     background: radial-gradient(circle at 15% 75%, var(--glow) 0%, transparent 60%);
+}
+
+
+@media (max-width: 720px) {
+
+    .project-content {
+        flex-direction: column;
+        min-height: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project:nth-child(even) .project-content {
+        flex-direction: column;
+    }
+
+    .project-image {
+        border-radius: 0.5rem;
+    }
+
+    .project-text {
+        align-items: center;
+    }
+
+    .project-text button,
+    .project-text .button {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .project-bg {
+        background: radial-gradient(circle at 50% 100%, var(--glow) 0%, transparent 60%);
+    }
+    .project:nth-child(even) .project-bg {
+        background: radial-gradient(circle at 50% 100%, var(--glow) 0%, transparent 60%);
+    }
 }
