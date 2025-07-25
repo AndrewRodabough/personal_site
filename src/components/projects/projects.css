@@ -127,4 +127,11 @@
         margin-right: auto;
         display: block;
     }
+
+    .project-bg {
+        background: radial-gradient(circle at 50% 100%, var(--glow) 0%, transparent 60%);
+    }
+    .project:nth-child(even) .project-bg {
+        background: radial-gradient(circle at 50% 100%, var(--glow) 0%, transparent 60%);
+    }
 }

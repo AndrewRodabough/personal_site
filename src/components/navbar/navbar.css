@@ -1,5 +1,6 @@
 @import '../../styles.css';
 
+
 .navbarcontainer{
     color: var(--nav-text);
     background-color: var(--nav-background);
@@ -13,12 +14,11 @@
 
     max-width: 66rem;
     min-height: 50px;
-    width: 100%;
-
-    align-content: center;
 
     margin-left: auto;
     margin-right: auto;
+
+    align-content: center;
     
     box-sizing: border-box;
 }
@@ -27,7 +27,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 .navbarvertical {
@@ -60,8 +59,7 @@
 }
 
 .vertical-menu{
-    /* These styles will be applied to the 'nav' element inside navbarvertical */
-    width: 100%; /* Ensure it takes full width */
+    /*width: 100%; /* Ensure it takes full width */
 }
 
 
