@@ -1,9 +1,28 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import './navbar.css';
 
+type NavItem = {
+    label: string;
+    href: string;
+};
 
-const NavBar: React.FC = () => {
+type NavBarProps = {
+    items?: NavItem[];
+    title?: ReactNode;
+};
 
+const defaultItems: NavItem[] = [
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Resume', href: '#resume' },
+    { label: 'Contact', href: '#contact' },
+];
+
+const NavBar: React.FC<NavBarProps> = ({
+    items = defaultItems,
+    title = <h1>Andrew Rodabough</h1>,
+}) => {
     const [isHamburger, setIsHamburgerVisible] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,7 +35,7 @@ const NavBar: React.FC = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-        
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 650) {
@@ -26,9 +45,7 @@ const NavBar: React.FC = () => {
             }
         };
 
-        // Check on mount
         handleResize();
-
         window.addEventListener('resize', handleResize);
 
         return () => {
@@ -39,14 +56,13 @@ const NavBar: React.FC = () => {
     return (
         <header>
             <div className="navbarcontainer">
-            
                 <div className="navbarhorizontal">
                     <div className="left">
-                        <h1>Andrew Rodabough</h1>
+                        <a href="/" className="navbar-title">
+                            {title}
+                        </a>
                     </div>
-            
                     <div className="right">
-                        
                         {isHamburger ? (
                             <button className="hamburger" onClick={toggleMenu}>
                                 <svg viewBox="0 0 100 50" width="30" height="22">
@@ -56,35 +72,31 @@ const NavBar: React.FC = () => {
                                 </svg>
                             </button>
                         ) : (
-
                             <nav className='horizontal-menu'>
                                 <ul>
-                                    <li><a href="#about">About</a></li>
-                                    <li><a href="#projects">Projects</a></li>
-                                    <li><a href="#skills">Skills</a></li>
-                                    <li><a href="#resume">Resume</a></li>
-                                    <li><a href="#contact">Contact</a></li>
+                                    {items.map(item => (
+                                        <li key={item.href}>
+                                            <a href={item.href}>{item.label}</a>
+                                        </li>
+                                    ))}
                                 </ul>
                             </nav>
                         )}
                     </div>
-
                 </div>
-                
-                {/* Apply the 'open' class based on isMenuOpen state */}
                 <div className={`navbarvertical ${isMenuOpen && isHamburger ? 'open' : ''}`}>
-                    {/* The content itself is always rendered, but its visibility is controlled by max-height */}
                     <nav className="vertical-menu">
                         <ul>
-                            <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-                            <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
-                            <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
-                            <li><a href="#resume" onClick={() => setIsMenuOpen(false)}>Resume</a></li>
-                            <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+                            {items.map(item => (
+                                <li key={item.href}>
+                                    <a href={item.href} onClick={() => setIsMenuOpen(false)}>
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                 </div>
-                
             </div>
         </header>
     );

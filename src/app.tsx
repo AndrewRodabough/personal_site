@@ -5,6 +5,7 @@ import HomePage from './pages/home';
 import Projects from './pages/projects';
 import About from './pages/about';
 import Billing from './pages/billing';
+import Footer from './components/footer';
 
 const App: React.FC = () => {
     return (
@@ -12,9 +13,10 @@ const App: React.FC = () => {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/projects" element={<div><h1>Under Construction</h1><Projects /></div>} />
-                <Route path="/about" element={<div><h1>Under Construction</h1><About /></div>} />
+                <Route path="/about" element={<About />} />
                 <Route path="/billing" element={<Billing />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 };

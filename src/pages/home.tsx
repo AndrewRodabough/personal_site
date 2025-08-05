@@ -8,7 +8,6 @@ import Projects from '../components/projects/projects';
 import Skills from '../components/skills';
 import Resume from '../components/resume';
 import Contact from '../components/contact';
-import Footer from '../components/footer';
 
 const HomePage: React.FC = () => {
     return (
@@ -23,7 +22,7 @@ const HomePage: React.FC = () => {
             <Resume />
             <Contact />
         </main>
-        <Footer />
+        
     </>
     );
 };
