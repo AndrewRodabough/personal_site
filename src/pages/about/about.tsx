@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles.css';
-import Mountians from '../components/mountains';
-import NavBar from '../components/navbar/navbar';
+import './about.css';
+import Mountians from '../../components/mountains/mountains';
+import NavBar from '../../components/navbar/navbar';
 
 const About: React.FC = () => {
     return (

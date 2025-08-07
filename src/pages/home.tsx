@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles.css';
-import Mountians from '../components/mountains';
+import Mountians from '../components/mountains/mountains';
 import NavBar from '../components/navbar/navbar';
 import Landing from '../components/landing/landing';
 import About from '../components/about/about';

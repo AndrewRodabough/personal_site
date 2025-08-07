@@ -7,7 +7,7 @@ const projects = [
   {
     title: "WIP - Assignment Scheduler",
     description: "Advanced Task Scheduler. This project involved using HTML, CSS, and JavaScript to create a responsive web application.",
-    image: "/assignment.png",
+    image: "/assignment.jpg",
     links: [
       { label: "GitHub", url: "https://github.com/AndrewRodabough/AssignmentScheduler" },
       { label: "Live Site", url: "https://startup.assignmentscheduler.com" }
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Portfolio Site",
     description: "This website you are viewing. This site was made using Vite, React, and TypeScript",
-    image: "/portfolio.png",
+    image: "/portfolio.jpg",
     links: [
       { label: "GitHub", url: "https://github.com/AndrewRodabough/personal_site" }
     ]
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Lawfirm Billing System",
     description: "A Commisioned billing application to expeditie billing of clients' phone calls. Integrated with office 365. Built using Microsoft Access",
-    image: "/billing.png",
+    image: "/billing.jpg",
     links: [
       { label: "Learn More", url: "/billing" },
     ]

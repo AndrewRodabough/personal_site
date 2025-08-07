@@ -1,0 +1,59 @@
+@import '../../styles.css';
+
+:root{
+    --sky: linear-gradient(to bottom, #091424 50%, #333c4d);
+    --mountains:  var(--background-primary);
+    --star: #fff6d3;
+    --star-shadow: #fff5;
+}
+
+
+.sky {
+    position: absolute;      /* Use fixed to cover the viewport */
+    top: 0;               /* Start at the very top */
+    left: 0;    
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: var(--sky);
+    pointer-events: none;
+}
+
+.mountains {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.mountain {
+    position: absolute;
+    bottom: 0;
+    width: 150%;
+    height: 60%;
+    background: var(--mountains);
+}
+
+
+.leftmt {
+  clip-path: polygon(0% 30%, 0% 100%, 60% 100%);
+}
+
+.rightmt {
+  clip-path: polygon(70% 0%, 100% 100%, 0% 100%);
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--star);
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 6px 2px var(--star-shadow);
+  pointer-events: none;
+}

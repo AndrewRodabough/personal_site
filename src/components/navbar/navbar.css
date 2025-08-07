@@ -1,5 +1,9 @@
 @import '../../styles.css';
 
+:root{
+    --nav-background: #10121b;
+    --nav-text: var(--text-primary);
+}
 
 .navbarcontainer{
     color: var(--nav-text);
