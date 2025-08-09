@@ -53,7 +53,7 @@ header{
     z-index: 20;
     background: linear-gradient(to bottom, var(--background-primary) 55%, #00000000);
 
-    padding: 2rem;
+    padding: 1.5rem;
     box-sizing: border-box;
 }
 

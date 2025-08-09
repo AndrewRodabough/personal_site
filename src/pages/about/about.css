@@ -11,11 +11,6 @@
     border-radius: 10px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 0 15px var(--portrait-border);
-    
-    border-width: 1.5px;
-    border-color: var(--portrait-border);
-    border-style: solid;
 }
 
 .about-me {
@@ -53,4 +48,51 @@
 .profile .right {
     flex: 2;
     font-size: 14pt;
+}
+
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 648px; /* 4 images * 150px + 3 gaps * 16px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-row {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.carousel-arrow {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-arrow.left {
+    margin-right: 1rem;
+}
+.carousel-arrow.right {
+    margin-left: 1rem;
+}
+
+.carousel-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--portrait-border);
+    border: 1.5px solid var(--portrait-border);
 }
