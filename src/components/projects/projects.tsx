@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../styles.css';
 import './projects.css';
 import ProjectList from './projectlist';
@@ -31,12 +30,18 @@ const projects = [
   }
 ];
 
-const Projects: React.FC = () => {
+export const project_list = () => {
+  return (
+    <ProjectList projects={projects} />
+  )
+}
+
+export const Projects = () => {
   return (
     <section className="temp projects" id="projects">
       <h1>Projects</h1>
       <ul className="projects-container">
-        <ProjectList projects={projects} />
+        {project_list()}
       </ul>
       <a href="./projects" className="morelink" style={{ marginTop: '1rem', alignSelf: 'center' }}>
         View All Projects

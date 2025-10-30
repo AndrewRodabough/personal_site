@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles.css';
-import Proj from '../components/projects/projects';
+import { project_list } from '../components/projects/projects';
 
 const Projects: React.FC = () => {
     return (
         <>
             <main>
-                <Proj />
+                {project_list()}
             </main>
         </>
     );
