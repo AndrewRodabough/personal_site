@@ -1,19 +1,28 @@
-import React from 'react';
 import './about.css';
 
+export const about_text = () => {
+  return (
+    <>
+      <h1>About Me</h1>
+      <p>
+        Hi, I'm Andrew Rodabough. Currently I am in Provo Utah, studying Computer Science
+        at Brigham Young University. I specialize in full-stack web development, building 
+        desktop and mobile friendly applications.
+      </p>
+      <p>Along with my studies, I am a co-founder of Mambo — a dance competition management suite</p>
+      <p>In my free time, I enjoy ballroom and Latin dancing and creating art, particularly digital art.</p>
+    </>
+  )
+}
 
-const About: React.FC = () => {
+export const About = () => {
   return (
     <main>
       <section className="temp about" id="about">
-          <h1>About Me</h1>
-          <p> Hi, I'm Andrew Rodabough, I live in Provo Utah. Currently I am a senior currently
-              pursuing a Bachelors in Computer Science at Brigham Young University.
-          </p>
-          <p>In my free time, I enjoy working on personal projects, ballroom dance, art, and cooking.</p>
-          <a href="/about" className="morelink" style={{ marginTop: '1rem', alignSelf: 'center' }}>
-            Learn More
-          </a>
+        {about_text()}
+        <a href="/about" className="morelink" style={{ marginTop: '1rem', alignSelf: 'center' }}>
+          Learn More
+        </a>
       </section>
     </main>
   );

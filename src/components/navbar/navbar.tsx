@@ -61,7 +61,6 @@ const NavBar: React.FC = () => {
                                 <ul>
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#projects">Projects</a></li>
-                                    <li><a href="#skills">Skills</a></li>
                                     <li><a href="#resume">Resume</a></li>
                                     <li><a href="#contact">Contact</a></li>
                                 </ul>
@@ -78,7 +77,6 @@ const NavBar: React.FC = () => {
                         <ul>
                             <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
                             <li><a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
-                            <li><a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
                             <li><a href="#resume" onClick={() => setIsMenuOpen(false)}>Resume</a></li>
                             <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
                         </ul>
